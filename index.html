@@ -847,6 +847,63 @@ h2.group-title::before {
   .hero-features li { border-left: none; padding: 0 16px 0 0; }
   .contact-item b { font-size: 14px; }
 }
+
+/* ---------------- Markalar ---------------- */
+
+.brands { background: var(--bg); }
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.brand-logo {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.brand-logo img {
+  position: absolute;
+  inset: 18px;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.brand-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+
+.brand-logo:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+@media (max-width: 1080px) {
+  .brand-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  .brand-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .brand-logo img { inset: 12px; width: calc(100% - 24px); height: calc(100% - 24px); }
+}
+
+@media (max-width: 420px) {
+  .brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+
 </style>
 </head>
 <body>
@@ -883,6 +940,7 @@ h2.group-title::before {
       <a href="#hakkimizda">Kurumsal</a>
       <a href="#urunler">Ürünler</a>
       <a href="#hizmetler">Hizmetler</a>
+      <a href="#markalar">Markalar</a>
       <a href="#iletisim">İletişim</a>
     </nav>
 
@@ -953,7 +1011,7 @@ h2.group-title::before {
 <section class="section mission" id="misyonumuz">
   <div class="container mission-grid">
     <div class="mission-image">
-      <img src="assets/urunler.jpg" alt="Temizlik, kırtasiye ve gıda ürünleri" loading="lazy"/>
+      <img src="assets/macropark_revised.jpeg" alt="macropark" loading="lazy"/>
     </div>
     <div>
       <p class="label">Misyonumuz</p>
@@ -991,6 +1049,67 @@ h2.group-title::before {
         <h3>Toptan Tedarik</h3>
         <p>Güvenilir markaların ürünlerini toptan fiyatlarla, ihtiyacınız olan miktarda ve zamanında teslimat.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Markalar -->
+<section class="section brands" id="markalar">
+  <div class="container">
+    <div class="services-head">
+      <p class="label">Markalar</p>
+      <h2>Çalıştığımız Markalar</h2>
+      <p>Sektörün güvenilir markalarının ürünlerini toptan fiyatlarla sunuyoruz.</p>
+    </div>
+    <div class="brand-grid">
+        <div class="brand-logo"><img src="brand_images/activex.jpeg" alt="Activex" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/airwick.jpeg" alt="Airwick" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/arimop.jpeg" alt="Arımop" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/asperox.jpeg" alt="Asperox" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/bado.jpeg" alt="Bado" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/balkupu.jpeg" alt="Balküpü" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/bemol.jpeg" alt="Bemol" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/beybi.jpeg" alt="Beybi" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/beypazari.jpeg" alt="Beypazarı" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/cango.jpeg" alt="Cango" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/caykur.jpeg" alt="Çaykur" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/ceymop.jpeg" alt="Ceymop" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/cif.jpeg" alt="Cif" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/cim.jpeg" alt="Cim" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/coffeemate.jpeg" alt="Coffee Mate" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/cvs.jpeg" alt="CVS" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/damak.jpeg" alt="Damak" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/dogus.jpeg" alt="Doğuş" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/dogus1.jpeg" alt="Doğuş" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/domestos.jpeg" alt="Domestos" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/en.jpeg" alt="En" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/ersopack.jpeg" alt="Ersopack" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/ethex.jpeg" alt="Ethex" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/eti.jpeg" alt="Eti" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/irmak.jpeg" alt="Irmak" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/jacobs.jpeg" alt="Jacobs" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/joypack.jpeg" alt="Joypack" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/kavi.jpeg" alt="Kavi" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/koin.jpeg" alt="Koin" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/lav.jpeg" alt="Lav" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/lipton.jpeg" alt="Lipton" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/mas.jpeg" alt="Mas" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/maylo.jpeg" alt="Maylo" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/nescafe.jpeg" alt="Nescafe" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/noki.jpeg" alt="Noki" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/ofcay.jpeg" alt="Ofçay" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/palex.jpeg" alt="Palex" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/papillion.jpeg" alt="Papillion" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/pasabahce.jpeg" alt="Paşabahçe" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/pepsi.jpeg" alt="Pepsi" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/porcoz1.jpeg" alt="Porçöz" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/pursu.jpeg" alt="Pursu" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/rulopak.jpeg" alt="Rulopak" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/sariyer.jpeg" alt="Sarıyer" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/selpak.jpeg" alt="Selpak" loading="lazy"/></div>
+        <div class="brand-logo"><img src="brand_images/selpakprof.jpeg" alt="Selpak Professional" loading="lazy"/></div>  
+        <div class="brand-logo"><img src="brand_images/ulker.jpeg" alt="Ülker" loading="lazy"/></div>
+<div class="brand-logo"><img src="brand_images/yilmazlar.jpeg" alt="Yılmazlar" loading="lazy"/></div>
     </div>
   </div>
 </section>
@@ -1075,7 +1194,6 @@ h2.group-title::before {
   </div>
   <div class="container footer-bottom">
     <span>© <span id="year">2026</span> Macropark Toptan Tedarik. Tüm hakları saklıdır.</span>
-    <span>Web Tasarımı: <a href="https://www.mivutech.com" target="_blank" rel="noopener">Mivutech</a></span>
   </div>
 </footer>
 
